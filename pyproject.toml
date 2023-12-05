@@ -5,21 +5,15 @@ build-backend = "hatchling.build"
 [project]
 name = "python-skeleton"
 dynamic = ["version"]
-description = ''
+description = 'Basic skeleton for Python projects'
 readme = "README.md"
-requires-python = ">=3.7"
-license = "MIT"
-keywords = []
+requires-python = ">=3.11"
 authors = [
-  { name = "U.N. Owen", email = "void@some.where" },
+  { name = "Piotr Gorajski", email = "piotr.gorajski@gft.com" },
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.7",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
-  "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
@@ -27,9 +21,8 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Documentation = "https://github.com/unknown/python-skeleton#readme"
-Issues = "https://github.com/unknown/python-skeleton/issues"
-Source = "https://github.com/unknown/python-skeleton"
+Documentation = "https://github.com/e-prgi/python-skeleton#readme"
+Source = "https://github.com/e-prgi/python-skeleton"
 
 [tool.hatch.version]
 path = "src/python_skeleton/__about__.py"
@@ -52,7 +45,7 @@ cov = [
 ]
 
 [[tool.hatch.envs.all.matrix]]
-python = ["3.7", "3.8", "3.9", "3.10", "3.11"]
+python = ["3.11"]
 
 [tool.hatch.envs.lint]
 detached = true
@@ -78,12 +71,12 @@ all = [
 ]
 
 [tool.black]
-target-version = ["py37"]
+target-version = ["py311"]
 line-length = 120
 skip-string-normalization = true
 
 [tool.ruff]
-target-version = "py37"
+target-version = "py311"
 line-length = 120
 select = [
   "A",
