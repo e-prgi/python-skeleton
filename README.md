@@ -38,6 +38,16 @@ Create default env
 hatch env create
 ```
 
+Install pre-commit
+```console
+pip install pre-commit
+```
+
+Install the git hook scripts
+```console
+pre-commit install
+```
+
 ## Installation
 
 ```console
