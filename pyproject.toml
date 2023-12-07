@@ -24,6 +24,9 @@ dependencies = []
 Documentation = "https://github.com/e-prgi/python-skeleton#readme"
 Source = "https://github.com/e-prgi/python-skeleton"
 
+[project.scripts]
+python-skeleton = "python_skeleton.app:main"
+
 [tool.hatch.version]
 path = "src/python_skeleton/__about__.py"
 
@@ -148,3 +151,6 @@ exclude_lines = [
   "if __name__ == .__main__.:",
   "if TYPE_CHECKING:",
 ]
+
+[tools.hatch.build.targets.wheel]
+packages = ["src/python_skeleton"]
