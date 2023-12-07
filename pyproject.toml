@@ -18,7 +18,10 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = [
+  "pyspark==3.5.0",
+  "typer[all]",
+]
 
 [project.urls]
 Documentation = "https://github.com/e-prgi/python-skeleton#readme"
@@ -73,6 +76,11 @@ all = [
   "typing",
 ]
 
+[tool.mypy]
+disable_error_code = [
+  "no-redef"
+]
+
 [tool.black]
 target-version = ["py311"]
 line-length = 120
@@ -117,6 +125,8 @@ ignore = [
   "S105", "S106", "S107",
   # Ignore complexity
   "C901", "PLR0911", "PLR0912", "PLR0913", "PLR0915",
+  # Custom ignore
+  "N812"
 ]
 unfixable = [
   # Don't touch unused imports

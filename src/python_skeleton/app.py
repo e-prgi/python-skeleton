@@ -1,9 +1,16 @@
 import logging
+from pathlib import Path
+from typing import Annotated
+
+import typer
+
+from python_skeleton.transform import transform
 
 
-def main():
+def main(input_path: Annotated[Path, typer.Option(help="Path to input data file")]):
     logging.getLogger().setLevel(logging.INFO)
     logging.info(say_hello_to("Piotr"))
+    transform(input_path)
 
 
 def say_hello_to(me: str):
@@ -11,4 +18,4 @@ def say_hello_to(me: str):
 
 
 if __name__ == "__main__":
-    main()
+    typer.run(main)
