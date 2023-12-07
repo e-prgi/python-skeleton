@@ -61,7 +61,7 @@ dependencies = [
   "ruff>=0.0.243",
 ]
 [tool.hatch.envs.lint.scripts]
-typing = "mypy --install-types --non-interactive {args:src/python_skeleton tests}"
+typing = "mypy --install-types --ignore-missing-imports --non-interactive {args:src/python_skeleton tests}"
 style = [
   "ruff {args:.}",
   "black --check --diff {args:.}",
