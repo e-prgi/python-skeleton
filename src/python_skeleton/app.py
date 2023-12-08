@@ -4,7 +4,7 @@ from typing import Annotated
 
 import typer
 
-from python_skeleton.transform import transform
+from python_skeleton.etl.transform import transform
 
 
 def main(input_path: Annotated[Path, typer.Option(help="Path to input data file")]):
