@@ -39,6 +39,7 @@ dependencies = [
   "pytest",
   "pandas",
   "pyarrow",
+  "pytest-snapshot",
 ]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
